@@ -1,4 +1,4 @@
-package main
+package commandarrgh
 
 import (
 	"github.com/alvarogf97/commandarrgh/pkg/marshaler"
