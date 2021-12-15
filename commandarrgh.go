@@ -7,4 +7,4 @@ import (
 
 // Exports
 var SplitCommand = utils.SplitCommand
-var Marshal = marshaler.MarshallCommandArguments
+var Marshal = marshaler.MarshalCommandArguments

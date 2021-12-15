@@ -30,7 +30,7 @@ import (
 //
 // args.Directory must contains "/memes"
 // args.ShowHidden must be true
-func MarshallCommandArguments(args string, v interface{}) error {
+func MarshalCommandArguments(args string, v interface{}) error {
 	// splits the given args into an array
 	argsArray, err := shlex.Split(args)
 	if err != nil {
@@ -80,7 +80,6 @@ func MarshallCommandArguments(args string, v interface{}) error {
 		if tagValue, ok := rtype.Field(i).Tag.Lookup(TAG_VALIDATORS); ok {
 			validatorNames := strings.Split(tagValue, ",")
 			validators := make([]validations.Validator, len(validatorNames))
-
 			for i, validatorName := range validatorNames {
 				// checks the specified validator is registered
 				// into the `VALIDATOR_MAPPING`
@@ -104,9 +103,6 @@ func MarshallCommandArguments(args string, v interface{}) error {
 			splittedValue := strings.Split(tagValue, ",")
 			_, arg.required = utils.IndexOf(splittedValue, TAG_BINDING_REQUIRED)
 			_, arg.isBool = utils.IndexOf(splittedValue, TAG_BINDING_IS_BOOL)
-		} else {
-			arg.required = false
-			arg.isBool = false
 		}
 
 		// get argument value into his own type

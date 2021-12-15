@@ -45,9 +45,6 @@ func getArgumentValue(arg argumentMarshalerInfo, args []string) (interface{}, er
 		if arg.isBool {
 			rawValue = "true"
 		} else {
-			if len(args) < index+1 {
-				return nil, fmt.Errorf("flag %s has no value %s", arg.flag, arg.helptext)
-			}
 			rawValue = args[index+1]
 		}
 	} else if !exists && arg.required {
