@@ -1,3 +1,6 @@
+[![Build Status](https://app.travis-ci.com/alvarogf97/commandarrgh.svg?branch=master)](https://app.travis-ci.com/alvarogf97/commandarrgh)
+[![Coverage Status](https://coveralls.io/repos/github/alvarogf97/commandarrgh/badge.svg?branch=master)](https://coveralls.io/github/alvarogf97/commandarrgh?branch=master)
+
 <p align="center">
   <img width="200" height="250" src="https://cdn.pixabay.com/photo/2019/02/24/18/30/pirate-4018168_1280.png">
 </p>
